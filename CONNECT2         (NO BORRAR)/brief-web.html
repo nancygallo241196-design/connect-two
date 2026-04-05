@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brief Página Web | Connect2</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+
+body{
+  background:linear-gradient(135deg,#000,#111);
+  color:white;
+  padding:60px 20px;
+  display:flex;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:950px;
+}
+
+h1{
+  margin-bottom:40px;
+  font-size:34px;
+  background:linear-gradient(90deg,#ff7a18,#ff3c00);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* SECCIONES */
+.section{
+  background:rgba(255,255,255,0.05);
+  border-radius:16px;
+  margin-bottom:20px;
+  border:1px solid rgba(255,122,24,0.2);
+  overflow:hidden;
+}
+
+.section-header{
+  padding:18px 22px;
+  cursor:pointer;
+  font-weight:500;
+  background:rgba(255,255,255,0.03);
+}
+
+.section-content{
+  padding:25px;
+  display:none;
+}
+
+.section.active .section-content{
+  display:block;
+}
+
+/* INPUTS */
+.input-group{margin-bottom:18px;}
+.input-group label{
+  font-size:13px;
+  opacity:.8;
+  display:block;
+  margin-bottom:6px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+}
+
+textarea{resize:none;height:90px;}
+
+/* BOTONES MULTIPLE */
+.options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.option-btn{
+  padding:10px 16px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.2);
+  cursor:pointer;
+  font-size:13px;
+  transition:.3s;
+}
+
+.option-btn:hover{
+  border-color:#ff7a18;
+}
+
+.option-btn.active{
+  background:linear-gradient(135deg,#ff7a18,#ff3c00);
+  border:none;
+}
+
+/* BOTÓN FINAL */
+.submit-btn{
+  margin-top:30px;
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff7a18,#ff3c00);
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>Brief para Creación de Página Web</h1>
+
+<form id="briefWebForm">
+
+<!-- 1 INFORMACIÓN GENERAL -->
+<div class="section active">
+<div class="section-header">1. Información General</div>
+<div class="section-content">
+
+<div class="input-group">
+<label>Nombre del proyecto</label>
+<input type="text">
+</div>
+
+<div class="input-group">
+<label>Persona de contacto</label>
+<input type="text">
+</div>
+
+<div class="input-group">
+<label>Correo</label>
+<input type="email">
+</div>
+
+</div>
+</div>
+
+<!-- 2 OBJETIVO -->
+<div class="section">
+<div class="section-header">2. Objetivo del Sitio</div>
+<div class="section-content">
+
+<div class="options">
+<button type="button" class="option-btn">Generar ventas</button>
+<button type="button" class="option-btn">Captar leads</button>
+<button type="button" class="option-btn">Mostrar portafolio</button>
+<button type="button" class="option-btn">Posicionamiento</button>
+<button type="button" class="option-btn">Reservas / Citas</button>
+<button type="button" class="option-btn">Tienda en línea</button>
+</div>
+
+<div class="input-group">
+<label>¿Cómo mediremos el éxito?</label>
+<textarea></textarea>
+</div>
+
+</div>
+</div>
+
+<!-- 3 TIPO DE SITIO -->
+<div class="section">
+<div class="section-header">3. Tipo de Sitio Web</div>
+<div class="section-content">
+
+<div class="options">
+<button type="button" class="option-btn">Landing Page</button>
+<button type="button" class="option-btn">Sitio Corporativo</button>
+<button type="button" class="option-btn">E-commerce</button>
+<button type="button" class="option-btn">Portafolio</button>
+<button type="button" class="option-btn">Blog</button>
+<button type="button" class="option-btn">Plataforma Educativa</button>
+</div>
+
+</div>
+</div>
+
+<!-- 4 FUNCIONALIDADES -->
+<div class="section">
+<div class="section-header">4. Funcionalidades Necesarias</div>
+<div class="section-content">
+
+<div class="options">
+<button type="button" class="option-btn">Formulario de contacto</button>
+<button type="button" class="option-btn">WhatsApp directo</button>
+<button type="button" class="option-btn">Chat en vivo</button>
+<button type="button" class="option-btn">Pasarela de pago</button>
+<button type="button" class="option-btn">Sistema de reservas</button>
+<button type="button" class="option-btn">Blog autoadministrable</button>
+<button type="button" class="option-btn">SEO básico</button>
+<button type="button" class="option-btn">SEO avanzado</button>
+</div>
+
+</div>
+</div>
+
+<!-- 5 EXPERIENCIA UX -->
+<div class="section">
+<div class="section-header">5. Experiencia de Usuario</div>
+<div class="section-content">
+
+<div class="input-group">
+<label>¿Qué debe sentir el usuario al navegar?</label>
+<textarea></textarea>
+</div>
+
+<div class="input-group">
+<label>¿Qué acción principal debe realizar?</label>
+<textarea></textarea>
+</div>
+
+</div>
+</div>
+
+<button type="submit" class="submit-btn">Finalizar Brief Web</button>
+
+</form>
+</div>
+
+<script>
+/* ACCORDION */
+document.querySelectorAll(".section-header").forEach(header=>{
+  header.addEventListener("click",()=>{
+    header.parentElement.classList.toggle("active");
+  });
+});
+
+/* BOTONES MULTIPLE */
+document.querySelectorAll(".option-btn").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    btn.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>

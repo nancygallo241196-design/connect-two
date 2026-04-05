@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil Diseñador | Connect2</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+}
+
+/* HEADER PERFIL */
+.profile-header{
+  max-width:1100px;
+  margin:60px auto 40px;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding:0 20px;
+}
+
+.profile-img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  background-image:url('https://randomuser.me/api/portraits/women/44.jpg');
+  background-size:cover;
+  background-position:center;
+  border:5px solid white;
+}
+
+.profile-info h2{
+  font-size:28px;
+  font-weight:700;
+}
+
+.profile-info p{
+  margin-top:6px;
+  color:#bbb;
+}
+
+.specialties{
+  margin-top:15px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.tag{
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:12px;
+  background:rgba(255,255,255,0.08);
+}
+
+.hire-btn{
+  margin-top:20px;
+  padding:10px 22px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(135deg,#ff7a18,#ff3c00);
+  cursor:pointer;
+  color:white;
+  font-size:14px;
+}
+
+/* BIO */
+.bio{
+  max-width:900px;
+  margin:0 auto 40px;
+  padding:0 20px;
+  text-align:center;
+  color:#ccc;
+}
+
+/* GRID PROYECTOS */
+.projects{
+  max-width:1100px;
+  margin:0 auto 80px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:15px;
+}
+
+.project{
+  position:relative;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.project img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.project:hover img{
+  transform:scale(1.1);
+}
+
+.project::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  opacity:0;
+  transition:.3s;
+  top:0;
+  left:0;
+}
+
+.project:hover::after{
+  opacity:1;
+}
+
+.project-title{
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  font-size:13px;
+  z-index:2;
+  opacity:0;
+  transition:.3s;
+}
+
+.project:hover .project-title{
+  opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="profile-header">
+  <div class="profile-img"></div>
+
+  <div class="profile-info">
+    <h2>Nancy Gallo</h2>
+    <p>Ciudad Obregón, MX</p>
+
+    <div class="specialties">
+      <div class="tag">Branding</div>
+      <div class="tag">Identidad</div>
+      <div class="tag">Packaging</div>
+      <div class="tag">Dirección Creativa</div>
+    </div>
+
+    <button class="hire-btn">Contratar</button>
+  </div>
+</div>
+
+<!-- BIO -->
+<div class="bio">
+  Diseñadora estratégica especializada en construcción de identidad visual para marcas emergentes. 
+  Combino investigación, concepto y dirección creativa para desarrollar marcas memorables que conectan y venden.
+</div>
+
+<!-- PROYECTOS -->
+<div class="projects">
+
+<script>
+const projects = document.querySelector(".projects");
+
+for(let i=1;i<=12;i++){
+  projects.innerHTML += `
+  <div class="project">
+    <img src="https://picsum.photos/500/500?random=${i}">
+    <div class="project-title">Proyecto ${i}</div>
+  </div>
+  `;
+}
+</script>
+
+</div>
+
+</body>
+</html>
